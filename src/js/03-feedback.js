@@ -13,14 +13,14 @@ const STORAGE_KEY = "feedback-form-state";
 processingTheForm();
 
 
-// const formData = {email:"", name:""};
-let formData = {};
+const formData = {email:"", name:""};
+// let formData = {};
 
 function onFormSubmit(e) {
   e.preventDefault();
   e.currentTarget.reset();
-  formData.email = refs.email.value || "";
-  formData.message = refs.message.value || "";
+  formData.email = refs.email.value;
+  formData.message = refs.message.value;
   console.log(formData);
   localStorage.removeItem(STORAGE_KEY);
   
