@@ -13,8 +13,8 @@ const STORAGE_KEY = "feedback-form-state";
 processingTheForm();
 
 
-const formData = {email:"", name:""};
-// let formData = {};
+// const formData = {email:"", name:""};
+let formData = {};
 
 function onFormSubmit(e) {
   e.preventDefault();
@@ -37,9 +37,9 @@ function processingTheForm() {
    
   if (objectValues) {
     const saveEmail = objectValues.email;
-    refs.email.value = saveEmail;
+    refs.email.value = saveEmail || "";
     const saveMessage = objectValues.message;
-    refs.message.value = saveMessage;
+    refs.message.value = saveMessage || "";
    
   };
 };
