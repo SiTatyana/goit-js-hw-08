@@ -10,6 +10,7 @@ refs.form.addEventListener('submit', onFormSubmit);
 refs.form.addEventListener('input', throttle(onFormInput, 500));
 const STORAGE_KEY = "feedback-form-state";
 
+
 processingTheForm();
 
 
@@ -36,10 +37,9 @@ function processingTheForm() {
   const objectValues = JSON.parse(formValues);
    
   if (objectValues) {
-    const saveEmail = objectValues.email;
-    refs.email.value = saveEmail || "";
-    const saveMessage = objectValues.message;
-    refs.message.value = saveMessage || "";
+    refs.email.value = objectValues.email || "";
+    refs.message.value = objectValues.message || "";
+    formData=objectValues;
    
   };
 };
