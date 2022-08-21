@@ -7,7 +7,7 @@ const refs = {
     btn: document.querySelector('button')
 };
 
-refs.btn.addEventListener('submit', onFormSubmit);
+refs.form.addEventListener('submit', onFormSubmit);
 refs.form.addEventListener('input', throttle(onFormInput, 500));
 
 
